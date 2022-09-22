@@ -1,0 +1,111 @@
+:root {
+    /* Primary */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: var(--Cream);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card{
+    width: 570px;
+    height: 360px;
+    display: flex;
+    border-radius: 9px;
+    overflow: hidden;
+}
+#Parfumimage{
+    width: 50%;
+}
+#info-card{
+    background-color: var(--White);
+    width: 50%;
+    padding: 22px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+#info-card > div{
+    font-size: 0.7rem;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 5px;
+}
+#info-card > h1{
+    font-family: 'Fraunces', sans-serif;
+    color: var(--Very-dark-blue);
+    font-size: 1.9rem;
+    line-height: 28px;
+    font-weight: 700;
+}
+#info-card > p{
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+    line-height: 20px;
+}
+#info-card > h2{
+    font-family: 'Fraunces', sans-serif;
+    color: var(--Dark-cyan);
+    width: 100%;
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+}
+#info-card > h2 >del{
+    color: var(--Dark-grayish-blue);
+    font-size: 0.7rem;
+    margin-left: 18px;
+}
+#info-card > button{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#info-card > button:hover{
+    background-color: hsl(158, 36%, 20%);
+    cursor: pointer;
+}
+#info-card > button > img{
+    margin-right: 10px;
+}
+#Parfumimage_mobile{
+    display: none;
+}
+@media (max-width: 600px){
+    #Parfumimage{
+        display: none;
+    }
+    #Parfumimage_mobile{
+        display: block;
+    }
+    #card{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    #info-card{        
+        width: 100%;
+    }
+    #info-card > *{
+        margin: 10px 0;
+    }
+}
